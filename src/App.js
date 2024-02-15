@@ -54,7 +54,7 @@ function App() {
                 placeholder="Kemi"
                 onChange={handleChange}
                 name="firstName"
-                className="border rounded-md p-2 mb-2"
+                className="border rounded-md p-2 mb-2 w-80 sm:w-32"
               />
             </div>
             <div>
@@ -64,7 +64,7 @@ function App() {
                 placeholder="Abgbebi"
                 onChange={handleChange}
                 name="lastName"
-                className="border rounded-md p-2 mb-2"
+                className="border rounded-md p-2 mb-2  w-80 sm:w-32"
               />
             </div>
           </div>
@@ -75,7 +75,7 @@ function App() {
               placeholder="kemiade@alethian.com"
               onChange={handleChange}
               name="email"
-              className="border rounded-md p-2 mb-2 sm:w-full"
+              className="border rounded-md p-2 mb-2 w-80 sm:w-full"
             />
           </div>
           <div className="mt-2 ">
@@ -104,7 +104,8 @@ function App() {
               <p className="text-white bg-[#035856] text-sm sm:text-base rounded-2xl p-2 w-fit">
                 Lower and Upper case character
               </p>
-              <div className="text-sm sm:text-base sm:flex sm:gap-2">
+
+              <div className="text-sm sm:text-base sm:flex sm:gap-2 space-y-2">
                 <p className="text-white bg-[#035856] rounded-2xl p-2">
                   At least one special character
                 </p>{" "}
