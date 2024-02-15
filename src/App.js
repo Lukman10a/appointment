@@ -34,18 +34,18 @@ function App() {
   };
 
   return (
-    <div className="bg-slate-100 py-12 flex flex-col items-center justify-center">
-      <div className="flex flex-col justify-center items-center mt-24 space-y-4">
-        <h1 className="text-3xl font-bold">Create account</h1>
+    <div className="bg-slate-100 flex flex-col items-center justify-center">
+      <div className="sm:flex flex-col justify-center items-center mt-24 space-y-4">
+        <h1 className="text-3xl font-bold text-center">Create account</h1>
         <p>Get up and running and start booking appointments</p>
       </div>
-      <div className="flex justify-center items-center flex-col border m-10 p-10 rounded-md shadow-lg w-fit">
-        <div className="flex items-center gap-4 border p-4 px-36 rounded-lg shadow-lg">
+      <div className="flex justify-center items-center bg-white flex-col border m-10 p-10 rounded-md shadow-lg w-fit">
+        <div className="flex items-center gap-4 border p-4 px-28 sm:px-36 rounded-lg shadow-lg">
           <FcGoogle size={30} />
           <p>Sign up with Google</p>
         </div>
         <form className="mt-4">
-          <div className="flex gap-8">
+          <div className="flex gap-1 sm:gap-8">
             <div>
               <p>First Name</p>
               <input
@@ -74,7 +74,7 @@ function App() {
               placeholder="kemiade@alethian.com"
               onChange={handleChange}
               name="email"
-              className="border rounded-md p-2 mb-2 w-full"
+              className="border rounded-md p-2 mb-2 sm:w-full"
             />
           </div>
           <div className="mt-2 ">
@@ -96,12 +96,14 @@ function App() {
               </div>
             </div>
 
+            {/* password requirements */}
+
             <div className="space-y-2 bg-slate-200 p-3 rounded-md">
               <p>Password must contain:</p>
               <p className="text-white bg-[#035856]  rounded-2xl p-2 w-fit">
                 Lower and Upper case character
               </p>
-              <div>
+              <div className="text-sm sm:text-base">
                 <span className="text-white bg-[#035856] rounded-2xl p-2">
                   At least one special character
                 </span>{" "}
