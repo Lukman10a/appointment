@@ -34,7 +34,7 @@ function App() {
   };
 
   return (
-    <div className="bg-slate-100 flex flex-col items-center justify-center">
+    <div className="bg-slate-100 flex flex-col items-center justify-center w-full">
       <div className="sm:flex flex-col justify-center items-center mt-24 space-y-4">
         <h1 className="text-3xl font-bold text-center">Create account</h1>
         <p>Get up and running and start booking appointments</p>
