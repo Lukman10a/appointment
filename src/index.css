@@ -2,7 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    border-style: solid;
-    border-color: red;
-}
