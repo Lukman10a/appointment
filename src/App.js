@@ -40,7 +40,7 @@ function App() {
         <p>Get up and running and start booking appointments</p>
       </div>
 
-      <div className="flex justify-center items-center bg-white flex-col border my-8 p-10 rounded-md shadow-lg w-fit">
+      <div className="flex justify-center items-center bg-white flex-col border my-8 py-10 rounded-md shadow-lg w-fit">
         <div className="flex items-center gap-4 border p-4 px-28 sm:px-36 rounded-lg shadow-lg">
           <FcGoogle size={30} />
           <p>Sign up with Google</p>
