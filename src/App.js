@@ -39,7 +39,8 @@ function App() {
         <h1 className="text-3xl font-bold text-center">Create account</h1>
         <p>Get up and running and start booking appointments</p>
       </div>
-      <div className="flex justify-center items-center bg-white flex-col border m-10 p-10 rounded-md shadow-lg w-fit">
+
+      <div className="flex justify-center items-center bg-white flex-col border m-10 rounded-md shadow-lg w-fit">
         <div className="flex items-center gap-4 border p-4 px-28 sm:px-36 rounded-lg shadow-lg">
           <FcGoogle size={30} />
           <p>Sign up with Google</p>
@@ -100,7 +101,7 @@ function App() {
 
             <div className="space-y-2 bg-slate-200 p-3 rounded-md">
               <p>Password must contain:</p>
-              <p className="text-white bg-[#035856]  rounded-2xl p-2 w-fit">
+              <p className="text-white bg-[#035856] text-sm sm:text-base rounded-2xl p-2 w-fit">
                 Lower and Upper case character
               </p>
               <div className="text-sm sm:text-base">
