@@ -41,7 +41,7 @@ function App() {
       </div>
 
       <div className="flex justify-center items-center p-4 sm:p-10 bg-white flex-col border my-8 py-10 rounded-md shadow-lg w-fit">
-        <div className="flex items-center gap-4 border p-4 px-28 sm:px-36 rounded-lg shadow-lg">
+        <div className="flex items-center gap-4 border p-4 px-20 sm:px-36 rounded-lg shadow-lg">
           <FcGoogle size={30} />
           <p>Sign up with Google</p>
         </div>
@@ -142,7 +142,7 @@ function App() {
         <button
           type="button"
           onClick={handleCreateAccount}
-          className="bg-[#035856] text-white px-40 py-2 rounded-md mt-8 "
+          className="bg-[#035856] text-white px-32 sm:px-40 py-2 rounded-md mt-8 "
         >
           Create Account
         </button>
