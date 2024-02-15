@@ -4,6 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 function App() {
   const [showPassword, setShowPassword] = useState(false);
+  const [passwordValid, setPasswordValid] = useState(true);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -22,6 +23,15 @@ function App() {
         [event.target.name]: event.target.value,
       };
     });
+
+    // Check password requirements
+    const password = event.target.value;
+    const isPasswordValid =
+      /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+        password
+      );
+
+    setPasswordValid(isPasswordValid);
   };
 
   const togglePasswordVisibility = () => {
@@ -45,8 +55,19 @@ function App() {
           <FcGoogle size={30} />
           <p>Sign up with Google</p>
         </div>
+
+        {/* The OR */}
+
+        <div className="flex items-center mt-4 space-y-4">
+          <div className="flex-1 border-t border-black"></div>
+          <p className="mx-4 text-gray-500">OR</p>
+          <div className="flex-1 border-t border-black"></div>
+        </div>
+
+        {/* Form */}
+
         <form className="mt-4">
-          <div className="sm:flex gap-1 sm:gap-8">
+          <div className="sm:flex justify-between gap-1 sm:gap-2">
             <div>
               <p>First Name</p>
               <input
@@ -54,7 +75,7 @@ function App() {
                 placeholder="Kemi"
                 onChange={handleChange}
                 name="firstName"
-                className="border rounded-md p-2 mb-2 w-80 sm:w-32"
+                className="border rounded-md p-2 mb-2 w-80 sm:w-36"
               />
             </div>
             <div>
@@ -64,7 +85,7 @@ function App() {
                 placeholder="Abgbebi"
                 onChange={handleChange}
                 name="lastName"
-                className="border rounded-md p-2 mb-2  w-80 sm:w-32"
+                className="border rounded-md p-2 mb-2  w-80 sm:w-36"
               />
             </div>
           </div>
@@ -86,7 +107,9 @@ function App() {
                 placeholder="Password"
                 onChange={handleChange}
                 name="password"
-                className=" border rounded-md p-2 mb-2 w-full"
+                className={`border rounded-md p-2 mb-2 w-full ${
+                  passwordValid ? "" : "border-red-500"
+                }`}
               />
 
               <div
@@ -105,12 +128,12 @@ function App() {
                 Lower and Upper case character
               </p>
 
-              <div className="text-sm sm:text-base sm:flex sm:gap-2 space-y-2">
+              <div className="text-sm sm:text-base sm:flex sm:items-center sm:gap-2 space-y-2">
                 <p className="text-white bg-[#035856] rounded-2xl p-2">
                   At least one special character
-                </p>{" "}
+                </p>
                 <p className="text-white bg-[#035856]  rounded-2xl p-2">
-                  At least one special character
+                  At least one number
                 </p>
               </div>
               <p className="bg-slate-100 rounded-2xl p-2 w-fit">
@@ -127,7 +150,9 @@ function App() {
                 placeholder="Confirm Password"
                 onChange={handleChange}
                 name="confirmPassword"
-                className="border rounded-md p-2 mb-2 w-full"
+                className={`border rounded-md p-2 mb-2 w-full ${
+                  passwordValid ? "" : "border-red-500"
+                }`}
               />
             </div>
 
