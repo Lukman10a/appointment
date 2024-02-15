@@ -46,7 +46,7 @@ function App() {
           <p>Sign up with Google</p>
         </div>
         <form className="mt-4">
-          <div className="flex gap-1 sm:gap-8">
+          <div className="sm:flex gap-1 sm:gap-8">
             <div>
               <p>First Name</p>
               <input
@@ -104,13 +104,13 @@ function App() {
               <p className="text-white bg-[#035856] text-sm sm:text-base rounded-2xl p-2 w-fit">
                 Lower and Upper case character
               </p>
-              <div className="text-sm sm:text-base">
-                <span className="text-white bg-[#035856] rounded-2xl p-2">
+              <div className="text-sm sm:text-base sm:flex sm:gap-2">
+                <p className="text-white bg-[#035856] rounded-2xl p-2">
                   At least one special character
-                </span>{" "}
-                <span className="text-white bg-[#035856]  rounded-2xl p-2">
+                </p>{" "}
+                <p className="text-white bg-[#035856]  rounded-2xl p-2">
                   At least one special character
-                </span>
+                </p>
               </div>
               <p className="bg-slate-100 rounded-2xl p-2 w-fit">
                 8 Characters long
