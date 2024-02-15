@@ -141,7 +141,7 @@ function App() {
         <button
           type="button"
           onClick={handleCreateAccount}
-          className="bg-[#035856] text-white px-48 py-2 rounded-md mt-8 w-fit"
+          className="bg-[#035856] text-white px-40 py-2 rounded-md mt-8 "
         >
           Create Account
         </button>
